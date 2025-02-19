@@ -20,12 +20,22 @@ body {
 
 /*  -- navbar -- */
 #navbar {
-	background-color: #0C5996;
+	background-color: #0c589600;
+	
+	transition: background 0.4s ease-in-out, box-shadow 0.4s;
+}
+
+#navbar.scrolled {
+    background-color: #0c5896dc;
+	backdrop-filter: blur(5px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link {
 
 	color: #D8F9FF !important;
+	
+	
 }
 
 #logo {
@@ -39,6 +49,7 @@ body {
 	border-radius: 20px;
 }
 /* -- end of navbar -- */
+
 
 
 /* -- landing -- */
@@ -136,22 +147,7 @@ body {
     position: relative;
     background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 8px;
-    overflow: hidden; 
 }
-
-#tools::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit; 
-    filter: blur(50px);
-    z-index: -1; 
-}
-
-
 
 
 
@@ -160,9 +156,6 @@ body {
     font-size: 40px;
     font-weight: 600;
     line-height: 48.76px;
-    /*text-align: center;*/
-    /*width: 385px;
-    height: 50.59px;*/
     color: #D8F9FF;
 
 }
@@ -172,10 +165,25 @@ body {
 	margin: auto;
 }
 
-#tool-logo1, #tool-logo2, #tool-logo3, #tool-logo4, #tool-logo5, #tool-logo6  {
+#tool-logo1, #tool-logo2, #tool-logo3, #tool-logo4, #tool-logo5, #tool-logo6 {
 	width: 80px;
 	height: 80px;
+	transition: transform 0.3s ease-in-out;
+	overflow: hidden;
+	
 }
+
+
+#tool-logo1:hover, 
+#tool-logo2:hover, 
+#tool-logo3:hover, 
+#tool-logo4:hover, 
+#tool-logo5:hover, 
+#tool-logo6:hover {
+    transform: scale(1.2); /* Slight zoom */
+}
+
+
 /* -- End of tools -- */
 
 
