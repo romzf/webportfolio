@@ -31,12 +31,12 @@ body {
 #logo {
 
 	background: 
-		url("./images/Me.png");	
+		url("./images/R_Logo_Glow.png");	
 
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 	background-size: cover;
-	border-radius: 30px;
+	border-radius: 20px;
 }
 /* -- end of navbar -- */
 
@@ -126,7 +126,7 @@ body {
 
 #tools { 
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 8px;
   
 }
@@ -141,6 +141,11 @@ body {
     height: 50.59px;*/
     color: #D8F9FF;
 
+}
+
+#tools-img {
+	max-width: 50%;
+	margin: auto;
 }
 
 #tool-logo1, #tool-logo2, #tool-logo3, #tool-logo4, #tool-logo5, #tool-logo6  {
