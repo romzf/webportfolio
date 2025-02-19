@@ -304,28 +304,31 @@
 			<div id="contact-container" class=" col-12 col-md-6 py-3 p-5">
 				<h3 id="contact-id">Message Me</h3>
 				<p id="contact-desc">Want to get in touch? Here's how you can reach me.</p>
-				<form id="contact-form" class=" container mt-3 collapse show">
+
+				<form id="contact-form" class=" container mt-3 collapse show" action="mailto:fajardoromar@gmail.com?subject=Contact%20Form%20(Web%20Portfolio)" method="POST" enctype="text/plain">
+					
 					<div class="form-group my-4">
-						<label for="exampleFormControlInput1" class="form-label">Name</label>
-						<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="eg. John Doe">
+						<label for="name" class="form-label">Name</label>
+						<input type="text" class="form-control" id="name" name="name" placeholder="eg. John Doe" required>
 					</div>
+
 					<div class="form-group my-4">
-						<label for="exampleFormControlInput1" class="form-label">Email address</label>
-						<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="eg. john.doe@mail.com">
+						<label for="email" class="form-label">Email address</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="eg. john.doe@mail.com" required>
 					</div>
+
 					<div class="form-group my-4">
-						<label for="exampleFormControlTextarea1" class="form-label">Message</label>
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+						<label for="message" class="form-label">Message</label>
+						<textarea class="form-control" id="message" name="message" rows="3"></textarea>
 					</div>
+
 					<div class="d-flex justify-content-end">
-						<button id="form-btn" class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#contact-form, #form-btn2">
-							Submit
+						<button id="form-btn" class="btn btn-primary" type="submit">
+							Send
 						</button>
 					</div>
 				</form>
-				<div class="my-5 d-flex justify-content-start">
-					<button id="form-btn2" class="btn collapse" data-bs-toggle="collapse" data-bs-target="#contact-form, #form-btn2">Send another message</button>
-				</div>
+				
 			</div>
 		</div>
 	</section>
