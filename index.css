@@ -7,6 +7,14 @@
 }
 /*  -- End of CSS Reset and font -- */
 
+/* vertical snap scrolling */
+/* html, body {
+	
+	scroll-snap-type: y mandatory; 
+	
+  } */
+
+  
 body {
 	background: 
 	linear-gradient(
@@ -14,9 +22,24 @@ body {
 		rgba(0, 0, 0, 0.59)
 		), 
 	url("./images/ImageLanding.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+	
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: cover; 
+	background-attachment: fixed;
+
+
 }
+
+#landing, #tools, #contact, #projects {
+	/* scroll-snap-align: start; */
+	height: 100vh;
+}
+
+/* #footer{
+	scroll-snap-align: start;
+} */
+
 
 /*  -- navbar -- */
 #navbar {
@@ -26,17 +49,30 @@ body {
 }
 
 #navbar.scrolled {
-    background-color: #0c5896dc;
-	backdrop-filter: blur(5px);
+    background-color: #0c5896a3;
+	/* backdrop-filter: blur(3px); */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.nav-link {
-
-	color: #D8F9FF !important;
-	
+/* nvbar text */
+.nav-link, .nav-link:focus{
+	color: #D8F9FF;
+    transition: color 0.3s;
 	
 }
+
+.nav-link:hover {
+    color: #f39c12 !important;
+}
+
+
+.nav-link.active {
+    color: rgb(11, 215, 65) !important; 
+	border-bottom: 2px solid #f39c12 !important;
+}
+
+/* -- */
+
 
 #logo {
 
@@ -53,7 +89,7 @@ body {
 
 
 /* -- landing -- */
-#landing {
+/* #landing {
 	background: 
 	linear-gradient(
 		rgba(0, 0, 0, 0.59),
@@ -62,7 +98,9 @@ body {
 	url("./images/ImageLanding.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+	
+	
+} */
 
 #profile {
 
@@ -109,12 +147,12 @@ body {
 
 
 /* -- projects -- */
-#projects { 
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+/* #projects { 
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 8px; /* Optional: to round corners */
+    border-radius: 8px; 
   
-}
+} */
 #projects h3 {
 	color: #D8F9FF;
 	font-family: Montserrat;
@@ -143,10 +181,12 @@ body {
   
 } */
 
-#tools {
-    position: relative;
+.content{
+    /* position: relative; */
     background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 8px;
+	/* backdrop-filter: blur(10px); */
+	
 }
 
 
@@ -157,32 +197,40 @@ body {
     font-weight: 600;
     line-height: 48.76px;
     color: #D8F9FF;
+	
 
 }
 
 #tools-img {
 	max-width: 50%;
 	margin: auto;
+	
 }
 
 #tool-logo1, #tool-logo2, #tool-logo3, #tool-logo4, #tool-logo5, #tool-logo6 {
 	width: 80px;
 	height: 80px;
-	transition: transform 0.3s ease-in-out;
-	overflow: hidden;
-	
+	transition: transform 0.2s ease-in-out;
+	/* transition: transform 0.3s cubic-bezier(0.25, 1.5, 0.5, 1); */
 }
 
 
+/* Slight zoom */
 #tool-logo1:hover, 
 #tool-logo2:hover, 
 #tool-logo3:hover, 
 #tool-logo4:hover, 
 #tool-logo5:hover, 
 #tool-logo6:hover {
-    transform: scale(1.2); /* Slight zoom */
+    transform: scale(1.4);
+	animation: bounce 1.5s ease-in-out 0.2s infinite;
 }
 
+@keyframes bounce {
+    0% { transform: scale(1.4) translateY(0); }
+    50% { transform: scale(1.4) translateY(-10px); } /* Float up */
+    100% { transform: scale(1.4) translateY(0px); } /* Back down */
+}
 
 /* -- End of tools -- */
 
