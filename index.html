@@ -5,44 +5,41 @@
 	<!-- Mobile Responsive meta tag-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Developer Portfolio</title>
-	
-	
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-	
 	<!-- External CSS -->
 	<link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-	
 	<!-- navbar -->
 	<nav id="navbar" class="navbar sticky-top navbar-expand-lg py-1" >
 		<div class="container-fluid ps-5">	
-			<a id="logo" class="" href="#landing">
-				<!-- logo -->
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse pe-5" id="navbarNav">
-				<div class="navbar-nav ms-auto">
-					<a class="nav-link" href="#landing">HOME</a>
-					<a class="nav-link" href="#projects" >PROJECTS</a>
-					<a class="nav-link" href="#tools" >TOOLS</a>
-					<a class="nav-link" href="#contact" >CONTACT</a>
-				</div>
+			<a id="navlogo" class="" href="#landing"></a>
+			<button class="navbar-toggler" 
+			type="button" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#navbarNav" 
+			aria-controls="navbarNav" 
+			aria-expanded="false" 
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse pe-5" id="navbarNav">
+			<div class="navbar-nav ms-auto">
+				<a class="nav-link" href="#landing">HOME</a>
+				<a class="nav-link" href="#projects" >PROJECTS</a>
+				<a class="nav-link" href="#tools" >TOOLS</a>
+				<a class="nav-link" href="#contact" >CONTACT</a>
 			</div>
 		</div>
+	</div>
 	</nav>
-	<!-- end of navbar -->
-	
+	<!-- -->
 	<!-- landing -->
 	<section id="landing" class="container-fluid py-5 align-content-center">
 		<div class="d-flex justify-content-md-center">
@@ -54,11 +51,10 @@
 			</div>
 		</div>
 	</section>
-	<!-- End of landing -->
-	
+	<!-- -->
 	<!-- projects -->
 	<section id="projects" class="text-center m-5 align-content-center">
-		<div class="content container">
+		<div class="container-bg container">
 			<h3 class="pt-4">My Projects</h3>
 			<div class="row justify-content-center p-5">
 				<!-- project1 -->
@@ -228,15 +224,12 @@
 				<!-- project1,2,3,4 end -->
 			</div>
 		</div>
-		
 	</section>
-	<!-- End of projects -->
-	
+	<!-- -->
 	<!-- tools -->
 	<section id="tools" class="text-center m-5 align-content-center"> 
-		<div class="content container">
-			<h2 class="pt-5">Tools</h2>
-			
+		<div class="container-bg container">
+			<h2 class="pt-5">Tools</h2>		
 			<!-- Front-End -->
 			<div class="mt-4">
 				<h2>Front-End</h2>
@@ -252,7 +245,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<!-- Back-End -->
 			<div class="mt-4">
 				<h2>Back-End</h2>
@@ -267,16 +259,13 @@
 						<img id="tool-logo5" src="./images/BackEnd3.png" class="img-fluid" title="JavaScript">
 					</div>
 				</div>
-			</div>
-			
+			</div>		
 		</div>
-		
 	</section>
-	<!-- End of tools -->
-	
+	<!-- -->
 	<!-- contact -->
-	<section id="contact" class="container-fluid d-flex justify-content-center align-items-center" >
-		<div class="">
+	<section id="contact" class="d-flex flex-column ">
+		<div class="container-sm d-flex flex-column justify-content-center flex-grow-1">
 			<div class="row">
 				<div id="contact-img" class=" col-md-6 py-3">
 					<!-- left Image -->
@@ -296,136 +285,149 @@
 								</div>
 								<div class="col-4 d-flex justify-content-center align-items-center">
 									<a href="https://www.linkedin.com/in/romar-fajardo/" target="_blank">
-										<img id="clogo3" src="./images/Linkedin_Dark.png" class="img-fluid"></a> 
-									</div>
+										<img id="clogo3" src="./images/Linkedin_Dark.png" class="img-fluid">
+									</a> 
 								</div>
 							</div>
 						</div>
+					</div>		
+				</div>
+				<div id="contact-container" class=" col-12 col-md-6 py-3 p-5">
+					<h3 id="contact-id">Message Me</h3>
+					<p id="contact-desc">Want to get in touch? Here's how you can reach me.</p>
+					
+					<form id="contact-form" class=" container mt-3 collapse show" action="mailto:fajardoromar@gmail.com?subject=Contact%20Form%20(Web%20Portfolio)" method="POST" enctype="text/plain">
 						
-					</div>
-					<div id="contact-container" class=" col-12 col-md-6 py-3 p-5">
-						<h3 id="contact-id">Message Me</h3>
-						<p id="contact-desc">Want to get in touch? Here's how you can reach me.</p>
+						<div class="form-group my-4">
+							<label for="name" class="form-label">Name</label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="eg. John Doe" required>
+						</div>
 						
-						<form id="contact-form" class=" container mt-3 collapse show" action="mailto:fajardoromar@gmail.com?subject=Contact%20Form%20(Web%20Portfolio)" method="POST" enctype="text/plain">
-							
-							<div class="form-group my-4">
-								<label for="name" class="form-label">Name</label>
-								<input type="text" class="form-control" id="name" name="name" placeholder="eg. John Doe" required>
-							</div>
-							
-							<div class="form-group my-4">
-								<label for="email" class="form-label">Email address</label>
-								<input type="email" class="form-control" id="email" name="email" placeholder="eg. john.doe@mail.com" required>
-							</div>
-							
-							<div class="form-group my-4">
-								<label for="message" class="form-label">Message</label>
-								<textarea class="form-control" id="message" name="message" rows="3"></textarea>
-							</div>
-							
-							<div class="d-flex justify-content-end">
-								<button id="form-btn" class="btn btn-primary" type="submit">
-									Send
-								</button>
-							</div>
-						</form>
+						<div class="form-group my-4">
+							<label for="email" class="form-label">Email address</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="eg. john.doe@mail.com" required>
+						</div>
 						
-					</div>
+						<div class="form-group my-4">
+							<label for="message" class="form-label">Message</label>
+							<textarea class="form-control" id="message" name="message" rows="3"></textarea>
+						</div>
+						
+						<div class="d-flex justify-content-end">
+							<button id="form-btn" class="btn btn-primary" type="submit">
+								Send
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
-		</section>
-		<!-- End of contact -->
-		
-		
+
+		</div>
+		<!-- -->	
 		<!-- footer -->
-		<footer class="text-center" id="footer">
-			<p class="mb-0 pt-3">Romar Fajardo</p>
+		<footer class="text-center w-100 py-1" id="footer">
+			<p class="mb-0">Romar Fajardo</p>
 			<p class="mb-0">Full Stack Web Developer</p>
-			<p class="mb-0 pb-3">&copy; <script>document.write(new Date().getFullYear());</script> | All rights reserved.</p>
+			<p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> | All rights reserved.</p>
 		</footer>
-		<!-- End of footer -->
-		
-		
-		<!-- Bootstrap JS -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		
-		<script>
-			// Combined script for scroll effect, navbar active state, and smooth scrolling
-			(function () {
-			  // Cache DOM elements
-			  const navbar = document.querySelector(".navbar");
-			  const navLinks = document.querySelectorAll(".nav-link");
-			  const sections = document.querySelectorAll("#landing, #projects, #tools, #contact, #footer");
-		  
-			  // Smooth scrolling variables
-			  let currentSection = 0;
-			  let isScrolling = false;
-		  
-			  // Scroll effect for navbar
-			  window.addEventListener("scroll", () => {
+	</section>
+	<!-- -->
+	
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<!-- Snap and smooth scroll effect, Navbar active state -->
+	<script>
+		(function () {
+			const navbar = document.querySelector(".navbar");
+			
+			const sections = document.querySelectorAll("#landing, #projects, #tools, #contact");
+			
+
+			// Smooth scrolling variables
+			let currentSection = 0;
+			let isScrolling = false;
+			
+			// Scroll effect for navbar
+			window.addEventListener("scroll", () => {
 				if (window.scrollY > 50) {
-				  navbar.classList.add("scrolled");
+					navbar.classList.add("scrolled");
 				} else {
-				  navbar.classList.remove("scrolled");
+					navbar.classList.remove("scrolled");
 				}
-			  });
-		  
-			  // Intersection Observer for navbar active state
-			  const observer = new IntersectionObserver(
-				(entries) => {
-				  entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-					  navLinks.forEach((link) => {
+			});
+			
+			// Intersection Observer for navbar active state
+			const navLinks = document.querySelectorAll(".nav-link");
+			const navLinksObserver = new IntersectionObserver((entries) => {entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					navLinks.forEach((link) => {
 						link.classList.remove("active");
 						if (link.getAttribute("href").substring(1) === entry.target.id) {
-						  link.classList.add("active");
+							link.classList.add("active");
 						}
-					  });
-					}
-				  });
-				},
-				{ threshold: 0.6 }
-			  );
-		  
-			  sections.forEach((section) => observer.observe(section));
-		  
-			  // Smooth scrolling with wheel event
-			  window.addEventListener("wheel", (e) => {
+					});
+				}});
+			},{ threshold: 0.6 });
+			sections.forEach((section) => navLinksObserver.observe(section));
+			
+			// Smooth scrolling with wheel event
+			window.addEventListener("wheel", (e) => {
 				if (isScrolling) return;
-		  
 				e.preventDefault();
-		  
 				isScrolling = true;
-		  
+				
 				if (e.deltaY > 0) {
-				  currentSection = Math.min(currentSection + 1, sections.length - 1);
+					currentSection = Math.min(currentSection + 1, sections.length - 1);
 				} else {
-				  currentSection = Math.max(currentSection - 1, 0);
+					currentSection = Math.max(currentSection - 1, 0);
 				}
-		  
+				
 				sections[currentSection].scrollIntoView({ behavior: "smooth" });
-		  
 				setTimeout(() => {
-				  isScrolling = false;
+					isScrolling = false;
 				}, 500);
-			  });
-		  
-			  // Smooth scrolling for navbar links
-			  navLinks.forEach((link) => {
+			});
+			
+			// Smooth scrolling for navbar links
+			navLinks.forEach((link) => {
 				link.addEventListener("click", (e) => {
-				  e.preventDefault();
-				  const targetId = link.getAttribute("href").substring(1);
-				  const targetElement = document.getElementById(targetId);
-		  
-				  if (targetElement) {
-					currentSection = Array.from(sections).indexOf(targetElement);
-					sections[currentSection].scrollIntoView({ behavior: "smooth" });
-				  }
+					e.preventDefault();
+					const targetId = link.getAttribute("href").substring(1);
+					const targetElement = document.getElementById(targetId);
+
+					if (targetElement) {
+						currentSection = Array.from(sections).indexOf(targetElement);
+						sections[currentSection].scrollIntoView({ behavior: "smooth" });
+					}
 				});
-			  });
-			})();
-		  </script>
-		
-	</body>
-	</html>
+			});
+
+			// ProfilePic
+			const profile = document.getElementById("profile");
+			const profileObserver = new IntersectionObserver((entries) => {entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						profile.classList.add("fade-in");
+					} else {
+						profile.classList.remove("fade-in"); 
+					}
+				});
+			}, { threshold: 0.5 });
+			profileObserver.observe(profile);
+			
+			// Name 
+			const name = document.getElementById("title");
+			const nameObserver = new IntersectionObserver((entries) => {entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						name.classList.add("glow");
+					} else {
+						name.classList.remove("glow"); 
+					}
+				});
+			}, { threshold: 0.5 });
+			nameObserver.observe(name);
+
+		})();
+	</script>
+	
+</body>
+</html>
