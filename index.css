@@ -12,13 +12,10 @@ body {
 		rgba(0, 0, 0, 0.59)
 		), 
 	url("./images/ImageLanding.png");
-	
 	background-repeat: no-repeat; 
 	background-position: center;
 	background-size: cover; 
 	background-attachment: fixed;
-
-
 }
 /* Sections */
 @media (min-width: 992px) {
@@ -26,18 +23,12 @@ body {
         height: 100vh;
     }
 }
+/* Sections Container */
 .container-bg{
-    /* position: relative; */
     background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 8px;
 	/* backdrop-filter: blur(10px); */
 }
-
-
-/* #footer{
-	scroll-snap-align: start;
-} */
-
 /*  -- navbar -- */
 #navbar {
 	background-color: #0c589600;
@@ -48,7 +39,6 @@ body {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 	/* backdrop-filter: blur(3px); */
 }
-/* nvbar text */
 .nav-link, .nav-link:focus{
 	color: #D8F9FF;
     transition: color 0.3s;
@@ -60,7 +50,6 @@ body {
     color: rgb(11, 215, 65) !important; 
 	border-bottom: 2px solid #f39c12 !important;
 }
-/* -- */
 #navlogo {
 	background: url("./images/R_Logo_Glow.png");
 	width: 40px;
@@ -68,8 +57,7 @@ body {
 	background-size: cover;
 	border-radius: 20px;
 }
-/* -- end of navbar -- */
-
+/* Section Landing */
 #profile {
 	background: 
 		url("./images/Me.png");	
@@ -78,22 +66,15 @@ body {
 	height: 240px;
 	background-size: cover;
 	border-radius: 400px;
-	opacity: 0;  /* Initially hidden */
+	opacity: 0;
 }
-
 #profile.fade-in {
     animation: fadeIn 1.5s ease-in-out forwards;
 }
-
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-
 #title {
     font-family: Montserrat;
     font-size: 50px;
@@ -104,12 +85,9 @@ body {
     text-shadow: none;
     transition: text-shadow 2s ease-in-out;
 }
-
 #title.glow {
-    text-shadow: 0 0 3px #fff, 0 0 6px #0b5ec99e, 0 0 9px #0b5dc9; /* Glow effect */
+    text-shadow: 0 0 3px #fff, 0 0 6px #0b5ec99e, 0 0 9px #0b5dc9;
 }
-
-
 #title-base  {
 	font-family: Montserrat;
 	font-size: 24px;
@@ -124,15 +102,7 @@ body {
 	line-height: 29.26px;
 	color: #FFFFFF;
 }
-/* -- End of landing -- */
-
-/* -- projects -- */
-/* #projects { 
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px; 
-  
-} */
+/* -- Section Projects -- */
 #projects h3 {
 	color: #D8F9FF;
 	font-family: Montserrat;
@@ -141,52 +111,29 @@ body {
 	line-height: 48.76px;
 	text-align: center;
 }
-
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.5); 
     padding: 1px;
     border-radius: 2px;
 }
-
-/* -- End of projects -- */
-
-/* -- tools -- */
-/* #tools { 
-    background-color: rgba(255, 255, 255, 0.1);
-    padding-top: 32px;
-    border-radius: 8px;
-	backdrop-filter: blur(5px);
-  
-} */
-
-
-
-
+/* -- Section Tools -- */
 #tools h2 {
     font-family: Montserrat;
     font-size: 40px;
     font-weight: 600;
     line-height: 48.76px;
     color: #D8F9FF;
-	
-
 }
-
 #tools-img {
 	max-width: 50%;
 	margin: auto;
-	
 }
-
 #tool-logo1, #tool-logo2, #tool-logo3, #tool-logo4, #tool-logo5, #tool-logo6 {
 	width: 80px;
 	height: 80px;
 	transition: transform 0.2s ease-in-out;
 	/* transition: transform 0.3s cubic-bezier(0.25, 1.5, 0.5, 1); */
 }
-
-
-/* Slight zoom */
 #tool-logo1:hover, 
 #tool-logo2:hover, 
 #tool-logo3:hover, 
@@ -196,21 +143,13 @@ body {
     transform: scale(1.4);
 	animation: bounce 3s ease-in-out 0.2s infinite;
 }
-
 @keyframes bounce {
     0% { transform: scale(1.4) translateY(0); }
-    50% { transform: scale(1.4) translateY(-10px); } /* Float up */
-    100% { transform: scale(1.4) translateY(0px); } /* Back down */
+    50% { transform: scale(1.4) translateY(-10px); }
+    100% { transform: scale(1.4) translateY(0px); }
 }
 
-/* -- End of tools -- */
-
-
-/* -- contact -- */
-
-/* #contact-img {
-	height: 900px
-} */
+/* -- Section Contact -- */
 #contact-container{
     background: #D8F9FF;
 }
@@ -221,7 +160,6 @@ body {
     line-height: 48.76px;
     text-align: left;
     color: #0C5996;
-
 }
 #contact-desc {
     font-family: Montserrat;
@@ -235,31 +173,25 @@ body {
     background: linear-gradient(
         rgba(0, 0, 0, 0.59),
         rgba(0, 0, 0, 0.59)),
-
     url("./images/contact.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #clogo1, #clogo2, #clogo3 {
 	width: 50px;
 	height: 50px;
 }
-
 #clogo1:hover, 
 #clogo2:hover, 
 #clogo3:hover {
     transform: scale(1.2);
 	animation: cbounce 3s ease-in-out 0.1s infinite;
 }
-
 @keyframes cbounce {
     0% { transform: scale(1.2) translateY(0); }
-    50% { transform: scale(1.2) translateY(-5px); } /* Float up */
-    100% { transform: scale(1.2) translateY(0px); } /* Back down */
+    50% { transform: scale(1.2) translateY(-2px); } 
+    100% { transform: scale(1.2) translateY(0px); }
 }
-
-
 #form-btn, #form-btn2{
     padding: 12px 32px 12px 32px;
     gap: 8px;
@@ -271,44 +203,32 @@ body {
     line-height: 24px;
     text-align: center;
     color:#FFFFFF;
-
 }
-
 #contact h4 {
-
 	font-family: Montserrat;
 	font-size: 50px;
 	font-weight: 600;
 	line-height: 24.38px;
 	text-align: left;
 	color: #D8F9FF;
-
 }
-
 #contact label {
-
 	font-family: Montserrat;
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 24.38px;
 	text-align: left;
 	color: #0C5996;
-
 }
-
 #contact input {
-
 	border: 1px solid #0C5996;
-
 	font-family: Montserrat;
 	font-size: 24px;
 	font-weight: 600;
 	line-height: 29.26px;
 	text-align: left;
 	color: #0C5996;
-
 }
-
 #contact textarea {
 	color: #765C3D;
 	border: 1px solid #0C5996;
@@ -318,11 +238,7 @@ body {
 	font-weight: 600;
 	line-height: 29.26px;
 	text-align: left;
-
 }
-/* -- End of contact -- */
-
-
 /* -- footer -- */
 footer, footer p {
 	background: #0C5996;
@@ -330,6 +246,4 @@ footer, footer p {
 	font-family: Montserrat;
 	font-size: 16px;
 	font-weight: 500;
-
 }
-/* -- End of footer  -- */
