@@ -45,11 +45,12 @@
 		<div class="d-flex justify-content-md-center">
 			<div id="profile" class="d-none d-md-block"></div>
 			<div class="my-auto ps-5">	
-				<h1 id="title">Romar Fajardo</h1>
-				<p id="title-base">Full Stack Web Developer</p>
+				<h1 id="titleName">Romar Fajardo</h1>
+				<p id="title">Full Stack Web Developer</p>
 				<p id="title-desc">Hi! I'm Romar, and this is my Developer Portfolio</p>
 			</div>
 		</div>
+		<a href="#projects" id="scroll-arrow">&#x2193;</a>
 	</section>
 	<!-- -->
 	<!-- projects -->
@@ -336,6 +337,35 @@
 	<!-- Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<!-- Snap and smooth scroll effect, Navbar active state -->
+
+	 <!-- down arrow -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const scrollArrow = document.getElementById("scroll-arrow");
+			const landingSection = document.getElementById("landing");
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						scrollArrow.classList.add("visible");
+					} else {
+						scrollArrow.classList.remove("visible");
+					}
+				});
+			}, { threshold: 0.5 });
+
+			observer.observe(landingSection);
+
+			// Smooth Scroll Effect
+			scrollArrow.addEventListener("click", function (e) {
+				e.preventDefault();
+				document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+			});
+		});
+
+
+	</script>
+	
 	<script>
 		(function () {
 			const navbar = document.querySelector(".navbar");
@@ -414,17 +444,34 @@
 			}, { threshold: 0.5 });
 			profileObserver.observe(profile);
 			
-			// Name 
-			const name = document.getElementById("title");
-			const nameObserver = new IntersectionObserver((entries) => {entries.forEach(entry => {
+			// titleName 
+			const titleName = document.getElementById("titleName");
+			const titleNameObserver = new IntersectionObserver((entries) => {entries.forEach(entry => {
 					if (entry.isIntersecting) {
-						name.classList.add("glow");
+						titleName.style.width = "100%";
+            			titleName.style.animation = "typing 1s steps(15, end) forwards"; 
+						titleName.classList.add("glow");
 					} else {
-						name.classList.remove("glow"); 
+						titleName.style.width = "0";
+            			titleName.style.animation = "none";
+						titleName.classList.remove("glow"); 
 					}
 				});
 			}, { threshold: 0.5 });
-			nameObserver.observe(name);
+			titleNameObserver.observe(titleName);
+
+			// title and desc
+			const titleElements = document.querySelectorAll("#title, #title-desc");
+			const titleDescObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("tfade-in");
+					} else {
+						entry.target.classList.remove("tfade-in");
+					}
+				});
+			}, { threshold: 0.5 });
+			titleElements.forEach(element => titleDescObserver.observe(element));
 
 		})();
 	</script>
